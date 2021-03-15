@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Otázky a úkoly</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 5px solid black;
+            border-collapse: collapse;
+        }
+
+        #t01 {
+            text-align: center;
+            background-color: lightgrey;
+        }
+
+        main {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Otázky a úkoly:</h2>
+        <div class="ot_od">
+            <ol>
+                <li class="ot">Jakou roli plní webový server? Uveďte příklady webových serverů.</li>
+                <p class="od">Webový server je odpovědný za vyřizování požadavků HTTP od klientů (např. webových
+                    prohlížečů). Vyřízením požadavků se rozumí odeslání cíle specifikovaného URL . Webové stránky jsou
+                    obvykle dokumenty v
+                    jazyku HTML. Nejčastěji se používá Apache, ale je i třeba <abbr title="Http File Server">HFS</abbr>,
+                    Abyss Web Server, Fenix atd.</p>
+                <li class="ot">Jak se nazývá program označovaný jako webový klient? Co je jeho úkolem? Vyjmenujte
+                    nejpoužívanější webové klienty.</li>
+                <p class="od">Protokol, a jeho úkolem je nabízet své služby klientům, neboli sprostředkovávat komunikaci
+                    mezi klienty a serverem. Nejpoužívanější jsou Google a Chrom, Microsoft Edge, Safari, Mozilla
+                    Firefox atd.</p>
+                <li class="ot">Jak probíhá komunikace mezi webovým klientem a webovým serverem?</li>
+                <p class="od">Požadavek nebo rovnou URL adresa je klientem převedena na HTTP 1.1 požadavek. Webový
+                    server
+                    na hostující adrese přidá cestu k cestě kořenového adresáře příslušného webového serveru a výsledkem
+                    bude cesta k lokálnímu souboru. Poté server soubor přečte nebo
+                    zpracuje a jako odpověď odešle výsledný obsah v případě
+                    úspěšného zpracování nebo chybovou hlášku v případě chyby. Celá odpověď je ve formě HTTP hlavičky se
+                    stavovou odpovědí, po které následuje výsledný obsah.</p>
+                <li class="ot">Co je HTTP?</li>
+                <p class="od"><abbr title="HyperText Transfer Protocol">HTTP</abbr> je internetový protokol určený pro
+                    komunikaci s WWW servery.</p>
+                <li class="ot">Vypište do tabulky stavové kódy HTTP.</li>
+                <table id="t01">
+                    <tr>
+                        <td nowrap><strong>Stavový kód</strong></td>
+                        <td><strong>Popis</strong></td>
+                    </tr>
+                    <tr>
+                        <td nowrap>100 Continue</td>
+                        <td>Klient může pokračovat v zasílání požadavku.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>101 Switching Protocols</td>
+                        <td>Server mění protokol.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>200 OK</td>
+                        <td>Operace proběhla bez chyby, požadavek je úspěšně splněn.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>201 Created</td>
+                        <td>Výsledkem požadavku je nově vytvořený objekt.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>202 Accepted</td>
+                        <td>Byl přijat asynchronní požadavek. Požadavek byl správně akceptován, odpovídající činnost se
+                            však ještě zatím nemusela provést.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>204 No Content</td>
+                        <td>Požadavek byl úspěsný, ale jeho výsledkem nejsou žádná data pro klienta.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>300 Multiple choises</td>
+                        <td>Požadovaný zdroj se dá získat z několika různých míst. V odpovědi se vrací seznam všech
+                            možností.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>301 Moved Permanently</td>
+                        <td>Požadovaná adresa URL se trvale přesunula na novou adresu URL. Všechny další odkazy musí
+                            použít tuto novou URL.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>302 Moved Temporarily</td>
+                        <td>Požadovaná adresa URL se dočasně přesunula na novou adresu URL. Všechny další odkazy mohou
+                            používat dosavadní URL.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>304 Not Modified</td>
+                        <td>Podmíněný požadavek byl správně zpracován, dokument však od udané doby nebyl modifikován.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td nowrap>400 Bad Request</td>
+                        <td>Server nerozumí požadavku, klient jej musí opravit a poslat znovu.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>401 Unauthorized</td>
+                        <td>Jestliže byl původní požadavek klienta anonymní, musí být nyní autentizován. Pokud už
+                            požadavek byl autentizován, pak byl přistup odepřen.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>403 Forbidden</td>
+                        <td>Server nemůže požadavku vyhovět, autorizace nebyla úspěšná.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>404 Not Found</td>
+                        <td>Server nenašel zadanou adresu URL.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>405 Method Not Allowed</td>
+                        <td>Použitá metoda není přípustná pro dosažení požadovaného objektu.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>406 Not Acceptable</td>
+                        <td>Požadovaný objekt není k dispozici ve formátu podporovaném klientem.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>408 Request Timeout</td>
+                        <td>Klient nedokončil odesílání požadavku v časovém limitu.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>410 Gone</td>
+                        <td>Požadovaný objekt byl trvale odstraněn.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>415 Unsupported Media Type</td>
+                        <td>Požadavek obsahuje data v serveru neznámém formátu.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>500 Internal Server Error</td>
+                        <td>Na serveru došlo k neočekávané chybě.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>501 Not Implemented</td>
+                        <td>Tento požadavek server nepodporuje.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>502 Bad Gateway</td>
+                        <td>Proxy server nebo brána obdržely od dalšího serveru neplatnou odpověď.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>503 Service Unavailable</td>
+                        <td>Server dočasně nemůže nebo nechce zpracovat požadavek. Většinou když je přetížený nebo se
+                            provádí údržba.</td>
+                    </tr>
+                    <tr>
+                        <td nowrap>505 HTTP Version Not Supported</td>
+                        <td>Server nepodporuje verzi HTTP v daném požadavku.</td>
+                    </tr>
+                </table>
+                <li class="ot">Proč se stále častěji využívá protokol HTTPS?</li>
+                <p class="od">Protože stránky, které jsou načítány s HTTPS jsou načteny rychleji než HTTP díky programu
+                    SPDY a ještě k tomu se přidává i šifrování dat a jiná bezpečnostní opatření.</p>
+                <li class="ot">Vysvětlete zkratku URL a připojte pět různých příkladů URL odkazů.</li>
+                <p class="od"><abbr title="(Uniform Resource Locator = jednotný lokátor zdroje)">URL</abbr> je řetězec
+                    znaků, který slouží k přesné specifikaci umístění zdrojů informací na Internetu.</p>
+            </ol>
+            <div class="id_container">
+                <a href="../a/index.html">Zpět</a>
+            </div>
+        </div>
+        <hr>
+        <p> &copy; Samuel Vaňuš IT1 SSPU-Opava</p>
+    </main>
+</body>
+
+</html>

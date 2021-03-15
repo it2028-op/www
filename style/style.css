@@ -28,7 +28,6 @@ font-size: 32px;
 }
 .id_container{
     display: flex;
-    background-color: lightgrey;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -47,4 +46,8 @@ font-size: 32px;
 }
 .ot_od {
     background-color:rgb(3, 150, 255);
+}
+
+.ot_od > div {
+    padding: 25px;
 }
